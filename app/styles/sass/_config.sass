@@ -1,0 +1,89 @@
+// USER VARIABLES SECTION
+
+$accent: #3e9cdc
+$fontsize: 16px
+$textcolor: #fff
+$darkcolor: #272733
+$lineheight: 1.3
+$userfont: lato-li, sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import '../sass/fontawesome/brands'
+@import '../sass/fontawesome/solid'
+@import '../sass/fontawesome/regular'
+@import '../sass/fontawesome/fontawesome'
+@import 'app/js/vendor/NiceSelect/nice-select'
+@import 'node_modules/nouislider/distribute/nouislider'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('lato-li', normal, 400, '../fonts/Lato-Regular.woff2')
+@include font('lato-li', normal, 500, '../fonts/Lato-Medium.woff2')
+@include font('lato-li', normal, 600, '../fonts/Lato-Semibold.woff2')
+@include font('lato-li', normal, 700, '../fonts/Lato-Bold.woff2')
+@include font('lato-li', normal, 800, '../fonts/Lato-Heavy.woff2')
+@include font('raleway-li', normal, 900, '../fonts/Raleway-ExtraBold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: $darkcolor
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+a
+	text-decoration: none
+	color: $textcolor
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: $textcolor
+
+ul
+	padding: 0
+	margin: 0
+	list-style-type: none
+
+html, body
+	height: 100%
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	font-weight: 400
+
+.container
+	width: 100%
+	max-width: 1170px
+	margin-left: auto
+	margin-right: auto
+	padding-left: 15px
+	padding-right: 15px
+
+

@@ -1,0 +1,70 @@
+.nice-select{
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+  background-color: #dfdfe1;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  float: none;
+  height: auto;
+  line-height: inherit;
+  color: $darkcolor;
+
+  .list{
+    max-height: 180px;
+    width: 100%;
+    background: rgba($darkcolor, .9);
+    top: 100%;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid #3d4050;
+    border-top: none;
+    transform: none;
+  }
+
+  .option{
+    background: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    padding: 10px 15px;
+    min-height: auto;
+  }
+
+  &:after {
+    border-bottom: 2px solid $darkcolor;
+    border-right: 2px solid $darkcolor;
+    height: 9px;
+    margin-top: -4px;
+    right: 20px;
+    width: 9px;
+  }
+
+  &.open:after{
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+}
+
+.nice-select .option.focus,
+.nice-select .option.selected.focus,
+.nice-select .option:hover{
+  background: none;
+  color: $accent;
+}
+
+.nice-select .option.selected{
+  font-weight: 300;
+  color: $accent;
+}
+
+.nice-select.open,
+.nice-select:active{
+  color: #ffffff;
+  background-color: #3d4050;
+  border-color: #3d4050;
+}
+

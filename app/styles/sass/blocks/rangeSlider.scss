@@ -1,0 +1,56 @@
+.form__range-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__range-desc{
+  margin-bottom: 0;
+}
+
+.form__range-value-wrap{
+  position: relative;
+}
+
+.form__range-value{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.form__range-slider{
+  flex: 1 0 100%;
+  margin-top: 16px;
+}
+
+.noUi-target{
+  height: 6px;
+  background-color: #dfdfe1;
+  border: 1px solid #fff;
+}
+
+.noUi-connect{
+  background: none;
+}
+
+.noUi-horizontal .noUi-handle{
+  width: 24px;
+  height: 24px;
+  background: $accent;
+  box-shadow: none;
+  border-radius: 100%;
+  top: -10px;
+  border: 3px solid #286690;
+
+  &:focus{
+    box-shadow: none;
+    border: none
+  }
+}
+
+.noUi-handle:after, .noUi-handle:before{
+  display: none;
+}
